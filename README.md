@@ -13,18 +13,6 @@
 
 *Submitted in partial fulfillment of the requirements for the degree of Bachelor of Technology in Computer Science & Engineering*
 
----
-
-| Team Member      | Roll No.      | Guided By        |
-|------------------|---------------|------------------|
-| Alveera Ahmad    | R2142221531   | **Kshitij Kumre** |
-| Omi Kumari       | R2142220340   |                   |
-| Sejal Kamboj     | R2142220637   |                   |
-| Shivam Singh     | R2142220940   |                   |
-
-</div>
-
----
 
 ## 📌 Overview
 
@@ -332,7 +320,6 @@ jiwer>=3.0.0            # WER computation
 
 *B.Tech CSE CCVT — School of Computer Science, UPES Dehradun*
 *Guided by: Kshitij Kumre*
-
 ---
 
 <div align="center">
