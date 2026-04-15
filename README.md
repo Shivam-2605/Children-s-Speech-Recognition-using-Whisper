@@ -24,9 +24,7 @@ School of Computer Science — B.Tech CSE CCVT
 
 | 👤 Team Member    | 🆔 Roll No.    |
 |------------------|---------------|
-| Alveera Ahmad    | R2142221531   |
 | Omi Kumari       | R2142220340   |
-| Sejal Kamboj     | R2142220637   |
 | Shivam Singh     | R2142220940   |
 
 **Guided by:** Kshitij Kumre &nbsp;|&nbsp; **Session:** 2025–2026
@@ -385,9 +383,7 @@ This project is submitted as an academic major project at **UPES Dehradun** and 
 
 | Name | Roll No. | GitHub |
 |------|----------|--------|
-| **Alveera Ahmad** | R2142221531 | [@alveera](https://github.com/) |
 | **Omi Kumari** | R2142220340 | [@omi](https://github.com/) |
-| **Sejal Kamboj** | R2142220637 | [@sejal](https://github.com/) |
 | **Shivam Singh** | R2142220940 | [@shivam](https://github.com/) |
 
 *B.Tech CSE CCVT — School of Computer Science, UPES Dehradun*
