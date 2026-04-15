@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kids' Voice Lab • Pastel Edition</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@700;800;900&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg1:#a5b4fc;  /* pastel indigo */
+      --bg2:#bae6fd;  /* pastel sky blue */
+      --bg3:#fbcfe8;  /* pastel pink */
+      --glass:rgba(255,255,255,.18);
+      --text:#444;
+      --muted:#555;
+      --shadow:0 20px 50px rgba(0,0,0,.15);
+      --radius:28px;
+      --ring:0 0 0 4px rgba(255,255,255,.25);
+      --yellow:#fef9c3;
+      --green:#bbf7d0;
+      --blue:#bfdbfe;
+      --pink:#fbcfe8;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;color:var(--text);
+      font:16px/1.6 Quicksand, Nunito, system-ui;
+      background:linear-gradient(135deg, var(--bg1), var(--bg2));
+      overflow-x:hidden;
+      cursor:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2332%22><text y=%2224%22 font-size=%2224%22>✨</text></svg>') 8 8, auto;
+    }
+
+    /* Background animation */
+    .veil{
+      position:fixed;inset:-40vmax;z-index:-3;filter:blur(110px);opacity:.4;
+      background:conic-gradient(from 0deg, var(--bg1), var(--bg2), var(--bg3), var(--bg1));
+      animation:spin 35s linear infinite;
+    }
+    @keyframes spin{to{transform:rotate(1turn)}}
+
+    /* Floating clouds */
+    .clouds{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:.7}
+    .cloud{position:absolute; filter:drop-shadow(0 12px 24px rgba(0,0,0,.05));}
+    .cloud svg{width:220px;height:auto;opacity:.9}
+    .c1{top:6%;left:-8%;animation:float 26s linear infinite}
+    .c2{top:18%;right:-10%;animation:float 32s linear infinite reverse}
+    .c3{bottom:10%;left:-12%;animation:float 30s linear infinite}
+    @keyframes float{0%{transform:translateX(0)}100%{transform:translateX(120vw)}}
+
+    header{padding:28px 22px;text-align:center}
+    .logo{display:inline-flex;align-items:center;gap:12px; padding:6px 12px; border-radius:999px; background:rgba(255,255,255,.5); border:1px solid rgba(0,0,0,.05)}
+    .badge{width:56px;height:56px;border-radius:18px;display:inline-grid;place-items:center; background:linear-gradient(135deg, #fff, #f3e8ff); box-shadow:var(--shadow); color:#7c3aed;font-size:1.6rem}
+    .logo h1{margin:0;font-family:Nunito;font-weight:900;font-size:clamp(28px,5vw,46px); color:#444}
+
+    .slogan{margin:10px auto 0;max-width:760px;font-weight:900;font-size:clamp(18px,3vw,28px); background:linear-gradient(90deg,#444, #fb7185, #3b82f6); -webkit-background-clip:text;background-clip:text;color:transparent}
+
+    .hero{display:grid;place-items:center;padding:20px}
+
+    .card{max-width:980px;width:100%;background:var(--glass);border:1px solid rgba(255,255,255,.4); box-shadow:var(--shadow);border-radius:var(--radius); backdrop-filter:saturate(130%) blur(22px); padding:26px;}
+
+    .title{margin:2px 0 0; font-size:clamp(24px,3.2vw,40px);font-weight:900;display:flex;align-items:center;gap:10px; color:#333}
+    .subtitle{margin:10px 0 18px;color:var(--muted);font-weight:700}
+
+    .wrap{display:grid; grid-template-columns: 1.1fr .9fr; gap:24px; align-items:center}
+    @media (max-width: 840px){.wrap{grid-template-columns:1fr;}}
+
+    .mascot{position:relative; display:grid; place-items:center; padding:18px}
+    .sparkle span{position:absolute; font-size:22px; animation:pop 2.8s ease-in-out infinite; opacity:.8}
+    @keyframes pop{0%,100%{transform:scale(.6) translateY(0)}50%{transform:scale(1.1) translateY(-6px)}}
+
+    .eq{display:flex;gap:10px;justify-content:center;align-items:flex-end;height:60px;margin:8px 0 0}
+    .bar{width:12px;border-radius:8px;background:linear-gradient(180deg,#f3e8ff, rgba(255,255,255,.65)); height:22%}
+
+    .player{background:rgba(255,255,255,.5);border:1px solid rgba(0,0,0,.05); border-radius:22px;padding:18px;margin:0 auto;max-width:560px}
+    audio{width:100%;outline:none}
+    audio:focus-visible{box-shadow:var(--ring);border-radius:12px}
+
+    .ribbon{margin-top:16px;display:inline-block;padding:10px 18px;border-radius:999px;font-weight:800; background:rgba(255,255,255,.5); border:1px solid rgba(0,0,0,.05); color:#444}
+
+    footer{padding:22px 20px;text-align:center;color:#444;font-weight:800}
+
+    .chip{background:rgba(255,255,255,.6); border:1px solid rgba(0,0,0,.05)}
+    .btn{background:#fff; color:#444}
+  </style>
+</head>
+<body>
+  <div class="veil" aria-hidden="true"></div>
+  <div class="clouds" aria-hidden="true">
+    <div class="cloud c1"><svg viewBox="0 0 200 120"><path fill="#fff" d="M45 95h110a30 30 0 0 0 0-60c-1 0-2 0-3 .1A38 38 0 0 0 75 50a26 26 0 0 0-30 45z"/></svg></div>
+    <div class="cloud c2"><svg viewBox="0 0 200 120"><path fill="#fff" d="M45 95h110a30 30 0 0 0 0-60c-1 0-2 0-3 .1A38 38 0 0 0 75 50a26 26 0 0 0-30 45z"/></svg></div>
+    <div class="cloud c3"><svg viewBox="0 0 200 120"><path fill="#fff" d="M45 95h110a30 30 0 0 0 0-60c-1 0-2 0-3 .1A38 38 0 0 0 75 50a26 26 0 0 0-30 45z"/></svg></div>
+  </div>
+
+  <header>
+    <div class="logo"><span class="badge">🎙️</span><h1>Kids' Voice Lab</h1></div>
+    <p class="slogan">Every Child’s Voice Matters</p>
+  </header>
+
+  <main class="hero">
+    <section class="card">
+      <div class="wrap">
+        <div class="mascot">🎨 <!-- keep mascot as emoji for pastel version -->
+          <div class="sparkle"><span>✨</span><span>🌸</span><span>⭐</span><span>💫</span></div>
+          <div class="eq" aria-hidden="true"><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+        </div>
+        <div>
+          <h2 class="title">Listen to a Child’s World 🎧</h2>
+          <p class="subtitle">Gentle, pastel, and joyful — discover the magic in children’s voices.</p>
+          <div class="player"><audio controls><source src="child-voice-sample.mp3" type="audio/mpeg"></audio></div>
+          <span class="ribbon">Kids • Voice • Joy</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>©️ 2025 Kids' Voice Lab • Designed with love in pastel colors</footer>
+</body>
+</html>
