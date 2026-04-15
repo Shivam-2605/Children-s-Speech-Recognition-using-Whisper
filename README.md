@@ -12,7 +12,7 @@
 **A B.Tech Major Project** — University of Petroleum & Energy Studies (UPES), Dehradun
 
 *Submitted in partial fulfillment of the requirements for the degree of Bachelor of Technology in Computer Science & Engineering*
-
+<div>
 
 ## 📌 Overview
 
